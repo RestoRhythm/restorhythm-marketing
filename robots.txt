@@ -1,0 +1,18 @@
+# RestoRhythm public website — robots policy
+# This deployment serves ONLY the public marketing site.
+
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /product/reserve$
+# Static assets must stay crawlable so Google can render the pages above.
+Allow: /assets/
+Allow: /brand/
+Allow: /images/
+Allow: /favicon.ico$
+Allow: /icon-192.png$
+Allow: /apple-touch-icon.png$
+# (Googlebot applies longest-match precedence, so the Allow rules win
+# over "Disallow: /" for exactly these public resources.)
+
+Sitemap: https://restorhythm.com/sitemap.xml
